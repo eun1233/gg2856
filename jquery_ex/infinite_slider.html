@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한갤러리</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul,li{list-style: none;}
+
+        #mask{
+            width: 500px;
+            height: 400px;
+            border: 10px solid #000;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        #img_wrap{
+            width: 2500px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -500px;
+
+        }
+
+        .img{
+            width: 500px;
+            height: 100%;
+            float: left;
+            text-align: center;
+            font: 900 100px/400px'';
+            color: #fff;
+
+        }
+
+        .btn{
+            width: 60px;
+            height: 60px;
+            background-color: dimgray;
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            text-align: center;
+            font: 30px/50px'';
+            cursor: pointer;
+            user-select: none;
+            color: #fff;
+        }
+
+        .btn img{
+            width: 50px;
+            height: 50px;
+            margin-top: 5px;
+        }
+
+        #prev{
+            left: -10px;
+            z-index: 99;
+        }
+
+        #next{
+            right: -10px;
+        }
+
+        #stop{
+            width: 60px;
+            height: 60px;
+            background-color: dimgray;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -30px;
+            font: 900 30px/60px'';
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #stop img{
+            width: 50px;
+            height: 50px;
+            margin-top: 8px;
+        }
+
+        #img_wrap img{
+            width: 500px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+
+
+    </style>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+
+           var mask_w = $('.img').width();
+
+
+           $('#next').click(function(){
+
+            $('#img_wrap').animate({
+                left: -mask_w*2,
+            },1000,function(){
+
+                $('#img_wrap').css({
+                    left: -mask_w,
+                }).find('.img').first().appendTo('#img_wrap');
+
+            });
+
+           });
+
+
+
+           $('#prev').click(function(){
+            
+            
+
+            $('#img_wrap').animate({
+                left: 0,
+            },1000,function(){
+
+                $('#img_wrap').css({
+                    left: -mask_w,
+                }).find('.img').last().prependTo('#img_wrap');
+
+            });
+
+           });
+
+
+        
+
+
+           function time(){
+            si = setInterval(function(){
+            $('#next').trigger('click');
+            },3000);
+            }
+           
+
+            var si = setInterval(function(){
+            $('#next').trigger('click')
+            },2000);
+
+           $('.btn').hover(function(){
+
+            clearInterval(si);
+
+           },function(){
+
+            time();
+
+           });
+
+
+        //    정지버튼
+
+        var i = 0;
+
+        $('#stop').click(function(){
+            if(i==0){
+                clearInterval(si);
+                i++;
+            }else if(i==1){
+                time();
+                i--;
+            }
+        });
+
+
+
+
+
+
+
+        });//end
+
+    </script>
+</head>
+<body>
+    <!-- 문제
+    무한갤러리
+mask 크기 500*400 , 테두리, 중앙정렬
+이미지프레임 5개 배열로 컬러지정
+버튼크기 60*60
+오른쪽 버튼 클릭시 다음 이미지 프레임
+원점 복귀없이 계속 슬라이드 구분 -->
+
+<div id="mask">
+
+    <div class="btn" id="prev"><img src="img/prev.png" alt=""></div>
+    <ul id="img_wrap">
+        <li class="img"><img src="img/5.JPG" alt=""></li>
+        <li class="img"><img src="img/6.JPG" alt=""></li>
+        <li class="img"><img src="img/7.JPG" alt=""></li>
+        <li class="img"><img src="img/8.JPG" alt=""></li>
+        <li class="img"><img src="img/9.JPG" alt=""></li>
+    </ul>
+    <div class="btn" id="next"><img src="img/next.png" alt=""></div>
+
+    <div id="stop"><img src="img/stop.png" alt=""></div>
+
+</div>
+</body>
+</html>
