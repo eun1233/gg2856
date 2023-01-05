@@ -203,7 +203,7 @@
         height: 10.769vw;
         background-color: #fff;
         margin: 30px auto;
-        border-radius: 40px 40px;
+        border-radius: 60px 60px;
         position: relative;
        
     }
@@ -218,14 +218,14 @@
     }
     
     #search input{
-        width: 31.578vw;
-        /* 240/760*100 */
+        width: 37.5vw;
+        /* 450/1200*100 */
         border: none;
         font-size: 2.307vw;
         /* 15/650*100 */
         position: absolute;
         top: 4.368vw;
-        left: 70px;
+        left: 80px;
     }
     
     button{
@@ -236,9 +236,10 @@
         background-color: rgb(98, 168, 48);
         position: absolute;
         right: 0;
-        font: 900 18px/0 '';
+        font: 900 2.333vw/0 '';
+        /* 28/1200*100 */
         border: none;
-        border-radius: 40px 40px;
+        border-radius: 60px 60px;
         color: #fff;
     }
     
@@ -813,8 +814,8 @@
     
     .sec05_menu{
         width: 85.526vw;
-        height: 13.157vw;
-        /* 100/760*100 */
+        height: 130px;
+        /* 130/760*100 */
         position: relative;
     }
     
@@ -845,9 +846,8 @@
 
     #sec05_main{
         width: 85.526vw;
-        height: 59.21vw;
-        /* 450/760*100 */
-        margin-top: 20px;
+        margin-top: 30px;
+        /* 20/760*100 */
         position: relative;
         
     }
@@ -874,7 +874,6 @@
     
     #sec05_book{
         width: 85.526vw;
-        height: 59.21vw;
         margin: 0 auto;
         position: absolute;
         top: 23.684vw;
@@ -884,7 +883,6 @@
     
     #book_slaid{
         width: 85.526vw;
-        height: 44.736vw;
         /* 340/760*100 */
         margin: 0 5px;
         position: absolute;
@@ -896,12 +894,11 @@
     #book_slaid li{
         width: 23.552vw;
         /* 179/760*100 */
-        height: 35.526vw;
         /* 270/760*100 */
         float: left;
         margin-right: 6.052vw;
         /* 46/760*100 */
-        margin-top: 90px;
+        /* 90/760*100 */
         
     }
 
