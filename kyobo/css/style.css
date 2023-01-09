@@ -900,8 +900,7 @@ button{
     position: fixed;
     top: 45px;
     right: -50px;
-
-    
+    z-index: 99;
 }
 
 .quick{
