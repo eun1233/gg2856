@@ -638,9 +638,6 @@ svg{
 
 
 
-
-
-
 /* boxmove */
 
 @keyframes boxmove{
@@ -672,6 +669,8 @@ svg{
         margin-left: -1920px;
     }
 }
+
+
 
 
 
