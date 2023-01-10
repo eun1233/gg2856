@@ -2,22 +2,22 @@ $(document).ready(function(){
 
 // menu
 
+
 var wh = $(window).height();
+
 
 $('.main_menu').each(function(index){
 
     $(this).attr('data-index',index);
+}).click(function(){
 
-   }).click(function(){
-    
     i = $(this).attr('data-index');
 
     $('html,body').animate({
         scrollTop: wh * i,
     },500);
 
-
-   });
+});
 
 
 // section01
