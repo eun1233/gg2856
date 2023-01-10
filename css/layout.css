@@ -34,17 +34,17 @@ header{
 }
 
 #menu{
-    width: 1000px;
+    width: 1200px;
     height: 100%;
     float: right;
     position: absolute;
-    left: 900px;
+    left: 700px;
     
     
 }
 
 .main_menu{
-    width: 25%;
+    width: 20%;
     height: 100%;
     text-align: center;
     line-height: 80px;
@@ -63,7 +63,7 @@ header{
     transition: 0.5s;
     position: absolute;
     bottom: 25px;
-    left: 75px;
+    left: 70px;
     
 }
 
@@ -675,8 +675,8 @@ svg{
 
 
 
-/* section05 */
-#sec05{
+/* footer */
+footer{
     width: 100%;
     height: 600px;
     margin: 0 auto;
@@ -685,7 +685,7 @@ svg{
     overflow: hidden;
 }
 
-#sec05>img{
+footer>img{
     width: 1920px;
     height: 160px;
     margin: 0 auto;
@@ -790,6 +790,17 @@ svg{
     margin-left: 50px;
 }
 
+#top_btn{
+    width: 80px;
+    height: 80px;
+    background-color: #1B6A97;
+    color: #fff;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font: 25px/80px'';
+    text-align: center;
+}
 
 
 
