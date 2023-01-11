@@ -579,7 +579,14 @@ svg{
     position: absolute;
     top: 0;
     animation: boxmove 4s infinite alternate;
-   
+    transform: rotate(-7deg);
+    transition: 0.5s;
+    box-shadow: #fff 1px 1px 2px;
+}
+
+#port01 img{
+    width: 350px;
+    height: 500px;
 }
 
 #port02{
@@ -587,25 +594,23 @@ svg{
     top: 0;
     left: 600px;
     animation: boxmove 3.5s 1s infinite alternate;
-    
+    transform: rotate(8deg);
+    transition: 0.5s;
+    box-shadow: #fff 1px 1px 2px;
 }
 
-#port01{
-    transition: 0.5s;
-}
-
-#port02{
-    transition: 0.5s;
+#port02 img{
+    width: 350px;
+    height: 500px;
 }
 
 #port01 h1{
     font-size: 30px;
     color: #004B84;
-    transform: rotate(-7deg);
     display: none;
     position: absolute;
-    top: -20px;
-    left: 125px;
+    top: -40px;
+    left: 135px;
 }
 
 
@@ -613,9 +618,8 @@ svg{
     font-size: 30px;
     color: #4BA35B;
     position: absolute;
-    top: -20px;
-    left: 207px;
-    transform: rotate(8deg);
+    top: -40px;
+    left: 130px;
     display: none;
 }
 

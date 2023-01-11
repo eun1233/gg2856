@@ -106,11 +106,14 @@ header{
 
 #sub_inmenu{
    
+   width: 230px; 
    height: 100%;
    float: right;
    margin-right: 30px;
    letter-spacing: 0.5px;
-
+   display: flex; 
+   justify-content: space-around;
+   
 }
 
 #sub_inmenu h6{
