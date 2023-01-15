@@ -154,7 +154,7 @@ $(document).ready(function(){
 
         sct = $(window).scrollTop();
 
-        if(sct>3300){
+        if(sct>3000){
             $('#sec05').css('opacity',1);
         }else{
             $('#sec05').css('opacity',0);
